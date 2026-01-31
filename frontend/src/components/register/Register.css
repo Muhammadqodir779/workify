@@ -1,0 +1,128 @@
+.register-page {
+  background-color: #f8f9fb;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.register-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 850px;
+  padding: 45px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.type-switcher {
+  display: flex;
+  background: #f0f2f5;
+  padding: 5px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0 auto 40px auto;
+}
+
+.type-btn {
+  border: none;
+  padding: 10px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  color: #8e94a8;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.type-btn.active {
+  background: #ffffff;
+  color: #1a334e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-top: 8px;
+}
+
+.input-icon {
+  color: #1a334e;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.gender-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f0f2f5;
+  padding: 4px;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.gender-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: #8e94a8;
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.gender-btn.active {
+  background: #ffffff;
+  color: #1a334e;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-back {
+  background: #ffffff;
+  border: 1px solid #1a334e;
+  color: #1a334e;
+  padding: 12px 60px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  cursor: pointer;
+}
+
+.btn-next {
+  background: #1a334e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  cursor: pointer;
+}

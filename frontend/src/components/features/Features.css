@@ -1,0 +1,58 @@
+.features-section {
+  padding: 80px 8%;
+  background-color: #ffffff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: transparent;
+  /* Dastlab border shaffof bo'ladi, sakrashni oldini olish uchun */
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Hover bo'lgandagi effekt - hamma bloklar uchun bir xil */
+.feature-card:hover {
+  background: #ffffff;
+  border: 1px solid #7c83fd; /* Dizayndagi och ko'k/binafsha border */
+  box-shadow: 0 15px 40px rgba(124, 131, 253, 0.12); /* Yumshoq soya */
+  transform: translateY(-10px); /* Ozgina tepaga ko'tarilish */
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #1a334e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 19px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  font-family: 'Gilroy-Medium', sans-serif;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Hover bo'lganda ikonka rangini ham biroz o'zgartirish (ixtiyoriy) */
+.feature-card:hover .feature-icon {
+  color: #7c83fd;
+}

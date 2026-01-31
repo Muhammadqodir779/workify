@@ -1,0 +1,153 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 8%;
+  min-height: 80vh;
+  gap: 40px;
+  /* Orqadagi yumshoq ko'k dog' (blob) effekti uchun */
+  background: radial-gradient(circle at 85% 50%, #f0f7ff 0%, #ffffff 40%);
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1.2;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 50px;
+  line-height: 1.1;
+  color: #1a334e;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.hero-description {
+  font-family: 'Gilroy-Medium', sans-serif;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 45px;
+  max-width: 420px;
+}
+
+/* Qidiruv paneli stili */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 10px 10px 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  max-width: 650px;
+}
+
+.search-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-group label {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-icon {
+  color: #999;
+  font-size: 16px;
+}
+
+.search-input-group input {
+  border: none;
+  outline: none;
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-divider {
+  width: 1px;
+  height: 40px;
+  background-color: #eee;
+  margin: 0 20px;
+}
+
+.btn-search {
+  background-color: #1a334e;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #142a40;
+}
+
+/* Rasm konteyneri */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hero-illustration {
+  width: 100%;
+  max-width: 600px; /* Rasm juda katta bo'lib ketmasligi uchun */
+  height: auto;
+  object-fit: contain;
+  /* Dizayndagi kabi biroz suzib turish animatsiyasi (ixtiyoriy) */
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Planshet va mobil uchun moslashuvchanlik */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .hero-content h1,
+  .hero-description {
+    max-width: 100%;
+  }
+  .search-box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .search-divider {
+    display: none;
+  }
+  .hero-image-container {
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

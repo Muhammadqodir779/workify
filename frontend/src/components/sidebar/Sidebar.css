@@ -1,0 +1,119 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: white;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Sahifa skroll bo'lganda sidebar joyida qoladi */
+  left: 0;
+  top: 0;
+  border-right: 1px solid #f0f2f5;
+  z-index: 1000;
+}
+
+/* Profil qismi */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.avatar-circle {
+  width: 48px;
+  height: 48px;
+  background: #f1f5f9;
+  color: #64748b;
+  border-radius: 12px; /* Rasmga mos kvadrat-doira shakli */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  overflow: hidden;
+}
+
+.profile-name {
+  font-size: 15px;
+  color: #1a334e;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.profile-location {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+/* Menyu elementlari */
+.sidebar-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #8e94a8;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.menu-item svg {
+  font-size: 20px;
+}
+
+/* Aktiv holati (Rasmda ko'rsatilgan to'q ko'k rang) */
+.menu-item.active {
+  background: #1a334e;
+  color: white;
+}
+
+.menu-item:hover:not(.active) {
+  background: #f8fafc;
+  color: #1a334e;
+}
+
+/* Sidebar Footer (Log out) */
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.logout-link {
+  color: #ff4d4d;
+}
+
+.logout-link:hover {
+  background: #fff5f5;
+  color: #ff4d4d;
+}
+
+/* Responsivlik uchun qo'shimcha */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    padding: 20px 10px;
+  }
+  .profile-info,
+  .menu-item span {
+    display: none; /* Mobil versiyada faqat iconlar qoladi */
+  }
+}

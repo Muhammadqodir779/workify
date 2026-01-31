@@ -1,0 +1,151 @@
+.step3-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f8f9fb;
+  min-height: 80vh;
+}
+
+.step-title {
+  text-align: center;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 36px;
+  color: #1a334e;
+  margin-bottom: 20px;
+}
+
+/* Progress Bar */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.progress-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 2px;
+  background: #e0e0e0;
+  position: relative;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+}
+
+.dot.completed {
+  background: #1a334e;
+}
+.dot.active {
+  background: #fff;
+  border: 3px solid #1a334e;
+  width: 16px;
+  height: 16px;
+}
+
+/* Tab Switcher Styles */
+.selection-group {
+  margin-bottom: 35px;
+}
+
+.group-label {
+  display: block;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.tab-switcher {
+  display: flex;
+  background: #f0f2f5;
+  padding: 6px;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 14px;
+  color: #8e94a8;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #1a334e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.tab-icon {
+  font-size: 18px;
+}
+
+/* Grid layout */
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.salary-input {
+  position: relative;
+}
+
+.currency-label {
+  position: absolute;
+  right: 15px;
+  color: #999;
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.single-col {
+  max-width: 100%;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid #1a334e;
+  color: #1a334e;
+  padding: 14px 70px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-next {
+  background: #1a334e;
+  color: #ffffff;
+  border: none;
+  padding: 14px 70px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}

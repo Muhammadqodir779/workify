@@ -1,0 +1,46 @@
+.nav-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: #1a334e;
+  background: #f0f4f8;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.feature-card.active .feature-icon {
+  background: #1a334e;
+  color: #fff;
+}
+
+.social-icons svg {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons svg:hover {
+  color: #7c83fd;
+}
+
+/* Sidebar va Kontentni yonma-yon qilish */
+
+/* .dashboard-root {
+  display: flex;
+}
+
+.auth-main-content {
+  flex: 1;
+  margin-left: 260px; 
+  min-height: 100vh;
+  background-color: #f4f7f9;
+  padding: 30px;
+} */

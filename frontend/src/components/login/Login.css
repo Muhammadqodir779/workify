@@ -1,0 +1,136 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #fcfcfc;
+  padding: 40px 20px;
+}
+
+.login-title {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 42px;
+  color: #1a334e;
+  margin-bottom: 30px;
+}
+
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px 15px;
+  transition: 0.3s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #1a334e;
+}
+
+/* Xatolik bo'lganda chiqadigan qizil line */
+.input-wrapper.error-border {
+  border-color: #ff4d4f;
+}
+
+.input-icon {
+  color: #1a334e;
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.eye-icon {
+  cursor: pointer;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #666;
+}
+
+.forgot-link {
+  color: #1a334e;
+  text-decoration: underline;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.btn-signin-large {
+  width: 100%;
+  background-color: #1a334e;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-signin-large:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-text a {
+  color: #1a334e;
+  font-family: 'Gilroy-Bold', sans-serif;
+  text-decoration: none;
+}

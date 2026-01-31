@@ -1,0 +1,173 @@
+.step2-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #f8f9fb;
+}
+
+.step-title {
+  text-align: center;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 32px;
+  color: #1a334e;
+  margin-bottom: 20px;
+}
+
+/* Progress bar dizayni */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.progress-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 2px;
+  background: #e0e0e0;
+  position: relative;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  z-index: 2;
+}
+
+.dot.completed {
+  background: #1a334e;
+}
+.dot.active {
+  background: #fff;
+  border: 3px solid #1a334e;
+  width: 14px;
+  height: 14px;
+}
+
+/* Dinamik qatorlar stili */
+.dynamic-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.custom-select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-family: 'Gilroy-Medium', sans-serif;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* Standart brauzer strelkasini olish */
+}
+
+.add-btn {
+  background: #f0f2f5;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  color: #1a334e;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.add-btn.green {
+  background: #e7f9f3;
+  color: #27ae60;
+}
+
+.add-btn:hover {
+  opacity: 0.8;
+}
+
+.remove-btn {
+  background: #fee;
+  border: none;
+  color: #ff4d4f;
+  width: 40px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.section-subtitle {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 18px;
+  margin: 30px 0 15px 0;
+  color: #1a334e;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+/* Oldingi CSS saqlanadi, faqat quyidagilar qo'shiladi yoki yangilanadi */
+
+.btn-container-right {
+  display: flex;
+  justify-content: flex-end; /* Tugmalarni o'ng tarafga surish */
+  margin-top: 10px;
+}
+
+.add-btn-v2 {
+  background: #00d084; /* Figma dizaynidagi yashil rang */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn-v2.green {
+  background: #00d084;
+}
+
+.add-btn-v2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 208, 132, 0.3);
+}
+
+.dynamic-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.remove-circle {
+  background: #e0e0e0;
+  color: #777;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px; /* Inputlar bilan tekis turishi uchun */
+}
+
+.remove-circle:hover {
+  background: #ff4d4f;
+  color: white;
+}

@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #fff;
+}
+
+.logo {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 26px;
+  color: #1a334e;
+  cursor: pointer; /* Siz so'ragan pointer */
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #666;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-icon {
+  margin-right: 6px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-signin {
+  border: 1px solid #1a334e;
+  background: transparent;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-join {
+  background: #1a334e;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lang-selector {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+}
+
+/* Avvalgi Header.css ga qo'shimcha yoki o'zgartirish */
+
+.logo {
+  text-decoration: none; /* Link chizig'ini olib tashlash */
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 26px;
+  color: #1a334e;
+  cursor: pointer;
+}
+
+.btn-signin-link {
+  text-decoration: none;
+  border: 1px solid #1a334e;
+  background: transparent;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: #1a334e;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-signin-link:hover {
+  background-color: #f0f4f8;
+}
