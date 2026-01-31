@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom'; // Faqat shu qoldirilsin
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Hero from './components/hero/Hero';
@@ -15,22 +10,18 @@ import RegisterStep2 from './components/registerStep2/RegisterStep2';
 import RegisterStep3 from './components/registerStep3/RegisterStep3';
 import Dashboard from './components/dashboard/Dashboard';
 import Profile from './components/profile/Profile';
-import Sidebar from './components/sidebar/Sidebar'; // Sidebar'ni import qiling
+import Sidebar from './components/sidebar/Sidebar';
 import './App.css';
 
 const AppContent = () => {
   const location = useLocation();
 
-  // Dashboard yoki Profile sahifasida ekanligini aniqlash
   const isAuthPage =
     location.pathname === '/dashboard' || location.pathname === '/profile';
 
   return (
     <div className={isAuthPage ? 'dashboard-root' : 'app-container'}>
-      {/* Sidebar faqat Dashboard va Profile sahifalarida chiqadi */}
       {isAuthPage && <Sidebar />}
-
-      {/* Header faqat oddiy sayt sahifalarida chiqadi */}
       {!isAuthPage && <Header />}
 
       <main className={isAuthPage ? 'auth-main-content' : 'site-main'}>
@@ -45,7 +36,6 @@ const AppContent = () => {
         </Routes>
       </main>
 
-      {/* Footer faqat oddiy sayt sahifalarida chiqadi */}
       {!isAuthPage && <Footer />}
     </div>
   );
@@ -59,11 +49,7 @@ const HomePage = () => (
 );
 
 function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
+  return <AppContent />; // ❌ Router olib tashlandi
 }
 
 export default App;
