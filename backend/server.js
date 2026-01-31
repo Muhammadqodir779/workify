@@ -19,7 +19,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/auth', authRoutes);
 
 // Baza bilan ulanishni tekshirish va serverni yoqish
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 sequelize
   .sync({ alter: true }) // Model va jadvalni moslashtiradi
