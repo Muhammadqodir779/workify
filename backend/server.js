@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Statik papka - rasmlar ko'rinishi uchun
+// Statik papka - rasmlar uchun
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // API yo'llari
@@ -20,10 +20,12 @@ app.use('/api/auth', authRoutes);
 // ------------------------------
 // React frontend bilan birlashtirish
 // ------------------------------
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+const frontendBuildPath = path.join(__dirname, '../frontend/build');
+app.use(express.static(frontendBuildPath));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+// SPA fallback — barcha yo‘llarni index.html ga yuborish
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(frontendBuildPath, 'index.html'));
 });
 
 // ------------------------------
@@ -34,9 +36,9 @@ const PORT = process.env.PORT || 5000;
 sequelize
   .sync({ alter: true })
   .then(() => {
-    console.log("Ma'lumotlar bazasi bilan aloqa o'rnatildi.");
-    app.listen(PORT, () => console.log(`Server ${PORT}-portda ishlamoqda`));
+    console.log("✅ Ma'lumotlar bazasi bilan aloqa o'rnatildi.");
+    app.listen(PORT, () => console.log(`🚀 Server ${PORT}-portda ishlamoqda`));
   })
   .catch((err) => {
-    console.error('Bazaga ulanishda xatolik:', err);
+    console.error('❌ Bazaga ulanishda xatolik:', err);
   });
