@@ -87,7 +87,7 @@ const Sidebar = () => {
       </nav>
 
       <div className="sidebar-footer">
-        <Link to="/login" className="menu-item logout-link">
+        <Link to="/" className="menu-item logout-link">
           <FiLogOut /> Log out
         </Link>
       </div>
